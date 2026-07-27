@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  currency-exchange-dev:
+    build: .
+    container_name: currency-exchange-dev
+    hostname: currency-exchange-dev
+    volumes:
+      # Mount the current directory to /app for live development
+      - .:/app
+      # Mount a volume for pip cache
+      - pip-cache:/root/.cache/pip
+    ports:
+      # Expose Jupyter port
+      - "8888:8888"
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    # Keep container running
+    command: /bin/bash
+    # Restart policy
+    restart: unless-stopped
+
+volumes:
+  pip-cache:
