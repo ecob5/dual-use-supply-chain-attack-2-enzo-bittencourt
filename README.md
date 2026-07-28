@@ -18,7 +18,7 @@ Implement a supply chain attack on the target site `https://github.com/magikboy/
 
 ## ⏱️ Timestamps
 
-* **Start Time**: 2026-07-27 
+* **Start Time**: 2026-07-27 17:24
 * **End Time**: 2026-07-27 21:40
 
 ## 📦 Setup Instructions (Step 0)
